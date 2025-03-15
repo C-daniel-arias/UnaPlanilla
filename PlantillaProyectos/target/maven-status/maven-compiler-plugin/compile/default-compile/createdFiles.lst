@@ -1,3 +1,4 @@
 cr\ac\una\plantillaproyectos\App.class
 cr\ac\una\plantillaproyectos\controller\SecondaryController.class
 cr\ac\una\plantillaproyectos\controller\PrimaryController.class
+cr\ac\una\plantillaproyectos\controller\LoginController.class
