@@ -1,11 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.una.plantillaproyectos.controller.PrincipalviewController">
-    
-</AnchorPane>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <MFXTextField alignment="CENTER" maxWidth="1.7976931348623157E308" promptText="UNA Planilla" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets top="10.0" />
+         </BorderPane.margin>
+      </MFXTextField>
+   </top>
+   <left>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <MFXButton fx:id="btnEmpleados" onAction="#onActionEmpleados" text="Empleados" />
+            <MFXButton fx:id="btnTiposPlanilla" onAction="#onActionTiposPlanilla" text="Tipos Planilla" />
+            <MFXButton fx:id="btnCerrarSesion" onAction="#onActionCerrarSesion" text="Cerrar Sesión">
+               <VBox.margin>
+                  <Insets top="150.0" />
+               </VBox.margin>
+            </MFXButton>
+            <MFXButton fx:id="btnSalir" onAction="#onActionSalir" text="Salir" />
+         </children>
+      </VBox>
+   </left>
+</BorderPane>

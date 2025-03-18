@@ -1,4 +1,7 @@
 cr\ac\una\plantillaproyectos\App.class
 cr\ac\una\plantillaproyectos\controller\SecondaryController.class
 cr\ac\una\plantillaproyectos\controller\PrimaryController.class
+cr\ac\una\plantillaproyectos\controller\TiposPlanillaViewController.class
+cr\ac\una\plantillaproyectos\controller\EmpleadosviewController.class
+cr\ac\una\plantillaproyectos\controller\PrincipalviewController.class
 cr\ac\una\plantillaproyectos\controller\LoginController.class
