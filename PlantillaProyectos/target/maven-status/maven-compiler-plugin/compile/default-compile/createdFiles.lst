@@ -2,6 +2,12 @@ cr\ac\una\plantillaproyectos\App.class
 cr\ac\una\plantillaproyectos\controller\SecondaryController.class
 cr\ac\una\plantillaproyectos\controller\PrimaryController.class
 cr\ac\una\plantillaproyectos\controller\TiposPlanillaViewController.class
-cr\ac\una\plantillaproyectos\controller\EmpleadosviewController.class
+cr\ac\una\plantillaproyectos\util\Formato.class
 cr\ac\una\plantillaproyectos\controller\PrincipalviewController.class
+cr\ac\una\plantillaproyectos\util\Mensaje.class
+cr\ac\una\plantillaproyectos\util\AppContext.class
+cr\ac\una\plantillaproyectos\controller\Controller.class
+cr\ac\una\plantillaproyectos\util\BindingUtils.class
+cr\ac\una\plantillaproyectos\util\FlowController.class
+cr\ac\una\plantillaproyectos\controller\EmpleadosviewController.class
 cr\ac\una\plantillaproyectos\controller\LoginController.class
