@@ -18,19 +18,16 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.VBox;
 
 /**
  * FXML Controller class
  *
- * @author cdani
+ * @author USUARIO PZ UNA
  */
-public class EmpleadosviewController implements Initializable {
+public class EmpleadosViewController implements Initializable {
 
     @FXML
-    private ToggleGroup Genero;
-    @FXML
-    private VBox fondoSec;
+    private AnchorPane fondoSec;
     @FXML
     private Label lbControlEmpleados;
     @FXML
@@ -45,6 +42,8 @@ public class EmpleadosviewController implements Initializable {
     private MFXTextField txfCedula;
     @FXML
     private MFXRadioButton rbutMasculino;
+    @FXML
+    private ToggleGroup Genero;
     @FXML
     private MFXRadioButton rbutFemenino;
     @FXML
@@ -65,8 +64,6 @@ public class EmpleadosviewController implements Initializable {
     private MFXButton btnEleminar;
     @FXML
     private MFXButton btnGuardar;
-    @FXML
-    private AnchorPane fondoPrin;
 
     /**
      * Initializes the controller class.

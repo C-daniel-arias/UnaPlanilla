@@ -16,16 +16,16 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane fx:id="fondoPrin" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.una.plantillaproyectos.controller.EmpleadosviewController">
+<AnchorPane id="AnchorPane" fx:id="fondoPrin" maxWidth="1.7976931348623157E308" prefHeight="412.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.una.plantillaproyectos.controller.EmpleadosViewController">
    <children>
-      <AnchorPane id="AnchorPane" fx:id="fondoSec" maxWidth="1.7976931348623157E308" prefHeight="412.0" prefWidth="600.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+      <VBox fx:id="fondoSec" alignment="CENTER" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
          <children>
-            <HBox alignment="TOP_CENTER" maxWidth="1.7976931348623157E308" prefHeight="40.0" prefWidth="600.0" AnchorPane.bottomAnchor="372.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <HBox alignment="TOP_CENTER" maxWidth="1.7976931348623157E308" prefHeight="40.0" prefWidth="600.0">
                <children>
                   <Label fx:id="lbControlEmpleados" alignment="CENTER" text="Control de Empleados" />
                </children>
             </HBox>
-            <HBox layoutY="38.0" AnchorPane.bottomAnchor="76.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="38.0">
+            <HBox>
                <children>
                   <VBox alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="298.0" prefWidth="295.0" spacing="10.0" HBox.hgrow="ALWAYS">
                      <children>
@@ -91,7 +91,7 @@
                   </VBox>
                </children>
             </HBox>
-            <HBox alignment="BOTTOM_CENTER" layoutX="7.0" layoutY="321.0" maxWidth="1.7976931348623157E308" prefHeight="79.0" prefWidth="200.0" spacing="40.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="333.0">
+            <HBox alignment="BOTTOM_CENTER" maxWidth="1.7976931348623157E308" prefHeight="79.0" prefWidth="200.0" spacing="40.0">
                <children>
                   <MFXButton fx:id="btnNuevo" buttonType="RAISED" onAction="#onActionNuevo" text="Nuevo">
                      <graphic>
@@ -135,6 +135,6 @@
                </padding>
             </HBox>
          </children>
-      </AnchorPane>
+      </VBox>
    </children>
 </AnchorPane>
