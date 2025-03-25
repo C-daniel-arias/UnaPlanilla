@@ -25,10 +25,10 @@ import javafx.scene.layout.VBox;
  *
  * @author cdani
  */
-public class EmpleadosviewController implements Initializable {
+public class EmpleadosViewController implements Initializable {
 
     @FXML
-    private ToggleGroup Genero;
+    private AnchorPane fondoPrin;
     @FXML
     private VBox fondoSec;
     @FXML
@@ -46,6 +46,8 @@ public class EmpleadosviewController implements Initializable {
     @FXML
     private MFXRadioButton rbutMasculino;
     @FXML
+    private ToggleGroup Genero;
+    @FXML
     private MFXRadioButton rbutFemenino;
     @FXML
     private MFXCheckbox cboxAdministrador;
@@ -54,7 +56,11 @@ public class EmpleadosviewController implements Initializable {
     @FXML
     private MFXDatePicker dpFechaIngreso;
     @FXML
+    private MFXDatePicker dpFechaSalida;
+    @FXML
     private MFXTextField txfCorreo;
+    @FXML
+    private MFXTextField txfUsuario;
     @FXML
     private MFXPasswordField pasfClave;
     @FXML
@@ -65,12 +71,6 @@ public class EmpleadosviewController implements Initializable {
     private MFXButton btnEleminar;
     @FXML
     private MFXButton btnGuardar;
-    @FXML
-    private AnchorPane fondoPrin;
-    @FXML
-    private MFXDatePicker dpFechaSalida;
-    @FXML
-    private MFXTextField txfUsuario;
 
     /**
      * Initializes the controller class.
