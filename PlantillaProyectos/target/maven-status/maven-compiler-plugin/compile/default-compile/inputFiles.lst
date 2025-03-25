@@ -1,13 +1,13 @@
-D:\Git repos\UnaPlanilla\PlantillaProyectos\src\main\java\cr\ac\una\plantillaproyectos\controller\TiposPlanillaViewController.java
-D:\Git repos\UnaPlanilla\PlantillaProyectos\src\main\java\cr\ac\una\plantillaproyectos\util\BindingUtils.java
-D:\Git repos\UnaPlanilla\PlantillaProyectos\src\main\java\cr\ac\una\plantillaproyectos\controller\SecondaryController.java
-D:\Git repos\UnaPlanilla\PlantillaProyectos\src\main\java\cr\ac\una\plantillaproyectos\App.java
-D:\Git repos\UnaPlanilla\PlantillaProyectos\src\main\java\cr\ac\una\plantillaproyectos\controller\PrimaryController.java
-D:\Git repos\UnaPlanilla\PlantillaProyectos\src\main\java\cr\ac\una\plantillaproyectos\controller\PrincipalviewController.java
-D:\Git repos\UnaPlanilla\PlantillaProyectos\src\main\java\cr\ac\una\plantillaproyectos\util\FlowController.java
-D:\Git repos\UnaPlanilla\PlantillaProyectos\src\main\java\cr\ac\una\plantillaproyectos\util\AppContext.java
-D:\Git repos\UnaPlanilla\PlantillaProyectos\src\main\java\cr\ac\una\plantillaproyectos\util\Formato.java
-D:\Git repos\UnaPlanilla\PlantillaProyectos\src\main\java\cr\ac\una\plantillaproyectos\controller\LoginController.java
-D:\Git repos\UnaPlanilla\PlantillaProyectos\src\main\java\cr\ac\una\plantillaproyectos\controller\EmpleadosviewController.java
-D:\Git repos\UnaPlanilla\PlantillaProyectos\src\main\java\cr\ac\una\plantillaproyectos\util\Mensaje.java
-D:\Git repos\UnaPlanilla\PlantillaProyectos\src\main\java\cr\ac\una\plantillaproyectos\controller\Controller.java
+C:\Users\USUARIO PZ UNA\Documents\GitHub\UnaPlanilla\PlantillaProyectos\src\main\java\cr\ac\una\plantillaproyectos\util\BindingUtils.java
+C:\Users\USUARIO PZ UNA\Documents\GitHub\UnaPlanilla\PlantillaProyectos\src\main\java\cr\ac\una\plantillaproyectos\controller\PrimaryController.java
+C:\Users\USUARIO PZ UNA\Documents\GitHub\UnaPlanilla\PlantillaProyectos\src\main\java\cr\ac\una\plantillaproyectos\util\Mensaje.java
+C:\Users\USUARIO PZ UNA\Documents\GitHub\UnaPlanilla\PlantillaProyectos\src\main\java\cr\ac\una\plantillaproyectos\App.java
+C:\Users\USUARIO PZ UNA\Documents\GitHub\UnaPlanilla\PlantillaProyectos\src\main\java\cr\ac\una\plantillaproyectos\controller\TiposPlanillaViewController.java
+C:\Users\USUARIO PZ UNA\Documents\GitHub\UnaPlanilla\PlantillaProyectos\src\main\java\cr\ac\una\plantillaproyectos\controller\SecondaryController.java
+C:\Users\USUARIO PZ UNA\Documents\GitHub\UnaPlanilla\PlantillaProyectos\src\main\java\cr\ac\una\plantillaproyectos\util\AppContext.java
+C:\Users\USUARIO PZ UNA\Documents\GitHub\UnaPlanilla\PlantillaProyectos\src\main\java\cr\ac\una\plantillaproyectos\util\FlowController.java
+C:\Users\USUARIO PZ UNA\Documents\GitHub\UnaPlanilla\PlantillaProyectos\src\main\java\cr\ac\una\plantillaproyectos\controller\LoginController.java
+C:\Users\USUARIO PZ UNA\Documents\GitHub\UnaPlanilla\PlantillaProyectos\src\main\java\cr\ac\una\plantillaproyectos\controller\PrincipalviewController.java
+C:\Users\USUARIO PZ UNA\Documents\GitHub\UnaPlanilla\PlantillaProyectos\src\main\java\cr\ac\una\plantillaproyectos\controller\EmpleadosviewController.java
+C:\Users\USUARIO PZ UNA\Documents\GitHub\UnaPlanilla\PlantillaProyectos\src\main\java\cr\ac\una\plantillaproyectos\controller\Controller.java
+C:\Users\USUARIO PZ UNA\Documents\GitHub\UnaPlanilla\PlantillaProyectos\src\main\java\cr\ac\una\plantillaproyectos\util\Formato.java

@@ -71,7 +71,7 @@
                         <HBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="200.0" spacing="5.0" VBox.vgrow="ALWAYS">
                            <children>
                               <MFXDatePicker fx:id="dpFechaIngreso" maxWidth="1.7976931348623157E308" text="Fecha ingreso" />
-                              <MFXDatePicker fx:id="dpFechaIngreso" maxWidth="1.7976931348623157E308" text="Fecha salida" />
+                              <MFXDatePicker fx:id="dpFechaSalida" maxWidth="1.7976931348623157E308" text="Fecha salida" />
                            </children>
                            <padding>
                               <Insets left="10.0" right="10.0" />
@@ -80,7 +80,7 @@
                         <VBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="100.0" spacing="10.0" VBox.vgrow="ALWAYS">
                            <children>
                               <MFXTextField fx:id="txfCorreo" floatMode="BORDER" floatingText="Correo" maxWidth="1.7976931348623157E308" />
-                              <MFXTextField fx:id="txfCorreo" floatMode="BORDER" floatingText="Usuario" maxWidth="1.7976931348623157E308" />
+                              <MFXTextField fx:id="txfUsuario" floatMode="BORDER" floatingText="Usuario" maxWidth="1.7976931348623157E308" />
                               <MFXPasswordField fx:id="pasfClave" floatMode="BORDER" floatingText="Clave" maxWidth="1.7976931348623157E308" />
                            </children>
                            <padding>
