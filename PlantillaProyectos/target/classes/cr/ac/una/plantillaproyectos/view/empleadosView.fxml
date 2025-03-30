@@ -16,13 +16,13 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane id="AnchorPane" fx:id="fondoPrin" maxWidth="1.7976931348623157E308" prefHeight="412.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.una.plantillaproyectos.controller.EmpleadosViewController">
+<AnchorPane id="AnchorPane" fx:id="fondoPrin" maxWidth="1.7976931348623157E308" prefHeight="412.0" prefWidth="600.0" styleClass="jfx-panelfondo" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cr.ac.una.plantillaproyectos.controller.EmpleadosViewController">
    <children>
-      <VBox fx:id="fondoSec" alignment="CENTER" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+      <VBox fx:id="fondoSec" alignment="CENTER" maxWidth="1.7976931348623157E308" styleClass="jfx-vbox" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
          <children>
             <HBox alignment="TOP_CENTER" maxWidth="1.7976931348623157E308" prefHeight="40.0" prefWidth="600.0">
                <children>
-                  <Label fx:id="lbControlEmpleados" alignment="CENTER" text="Control de Empleados" />
+                  <Label fx:id="lbControlEmpleados" alignment="CENTER" styleClass="jfx-titulo-label" text="Control de Empleados" />
                </children>
             </HBox>
             <HBox>
@@ -93,7 +93,7 @@
             </HBox>
             <HBox alignment="BOTTOM_CENTER" maxWidth="1.7976931348623157E308" prefHeight="79.0" prefWidth="200.0" spacing="40.0">
                <children>
-                  <MFXButton fx:id="btnNuevo" buttonType="RAISED" onAction="#onActionNuevo" text="Nuevo">
+                  <MFXButton fx:id="btnNuevo" buttonType="RAISED" onAction="#onActionNuevo" styleClass="jfx-btn-nuevo" text="Nuevo">
                      <graphic>
                         <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                            <image>

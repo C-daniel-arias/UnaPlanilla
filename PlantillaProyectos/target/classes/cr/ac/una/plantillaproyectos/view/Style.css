@@ -1,0 +1,73 @@
+*{
+   -fx-base-color-focus: #09b6bc;
+   -fx-base-color-etiquetas:#4d4d4d;
+   -fx-base-color-titulos: #51b6cd;
+       
+}
+.mfx-txt-field{
+    -mfx-main:-fx-base-color-focus;
+    -fx-prompt-text-fill:-fx-base-color-etiquetas;
+    -mfx-float-mode:BORDER;
+    -fx-font-size:14px;
+    -fx-min-height:40px;
+    -fx-pref-height:40px;
+    -fx-max-height:40px;
+    -fx-text-fill:black;
+    -fx-alignment:TOP_LEFT;
+}
+.mfx-checkbox{
+    -mfx-main:-fx-base-color-focus;
+    -fx-text-fill:-fx-base-color-etiquetas;
+    -fx-font-size:14px;
+    -fx-min-height:26px;
+    -fx-pref-height:26px;
+    -fx-max-height:26px;  
+}
+.mfx-date-picker{
+    -fx-font-size:14px;
+    -fx-min-height:40px;
+    -fx-pref-height:40px;
+    -fx-max-height:40px;
+}
+.mfx-date-picker:focus-within.icon{
+    -mfx-color:-fx-base-color-focus;
+}
+
+.mfx-button{
+    -mfx-button-type:RAISED;
+    -fx-opacity:0.8;
+    -fx-content-display:left;
+    -fx-text-fill:white;
+    -fx-font-weight:bold;
+    -fx-font-size:14px;
+    -fx-alignment:CENTER_LEFT;
+}
+.button:hover{
+    -fx-backgroudn-color:#FF6D00;
+}
+.jfx-btn-nuevo,.jfx-btn-nuevo:armed.jfx-btn-nuevo:focused{
+    -fx-backgroudn-color:#2196f3;
+}
+.jfx-btn-nuevo> imageView{
+    -fx-image:url("../resources/Agregar-48.png");
+}
+.separator{
+    -fx-backgroudn-color:-fx-base-color-focus;
+}
+.jfx-panelfondo{
+    -fx-background-color:#2196F3;
+    -fx-opacity:0.8;
+}
+.jfx-vbox{
+   -fx-background-color: white;
+   -fx-border-color: #97a692;
+   -fx-border-width: 10px;
+}
+.jfx-titulo-label{
+    -fx-font-size:24px;
+    -fx-padding: 5 0 5 0;
+    -fx-text-fill: -fx-base-color-titulos;
+    -fx-font-weight:bold;
+    -fx-effect:dropshadow(three-pass-box,rgba(0,0,0,0.6),2,0.0,1,2);
+    
+}

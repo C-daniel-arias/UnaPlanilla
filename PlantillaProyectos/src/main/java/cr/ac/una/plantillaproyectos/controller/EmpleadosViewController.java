@@ -4,6 +4,8 @@
  */
 package cr.ac.una.plantillaproyectos.controller;
 
+import cr.ac.una.plantillaproyectos.model.EmpleadoDto;
+import cr.ac.una.plantillaproyectos.util.Mensaje;
 import io.github.palexdev.materialfx.controls.MFXButton;
 import io.github.palexdev.materialfx.controls.MFXCheckbox;
 import io.github.palexdev.materialfx.controls.MFXDatePicker;
@@ -12,9 +14,12 @@ import io.github.palexdev.materialfx.controls.MFXRadioButton;
 import io.github.palexdev.materialfx.controls.MFXTextField;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.AnchorPane;
@@ -71,15 +76,37 @@ public class EmpleadosViewController extends Controller implements Initializable
     private MFXButton btnEleminar;
     @FXML
     private MFXButton btnGuardar;
+    
+    private EmpleadoDto empleado;
+    
+    private ObjectProperty<EmpleadoDto> empleadoProperty = new SimpleObjectProperty<>();
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+      bindEmpleado();
     }    
-
+    @Override
+    public void initialize() {
+     
+    }
+    
+    private void bindEmpleados(){
+        try {
+            empleadoProperty.addListener((obs,oldVal,newVal)->{
+                if(oldVal != null){
+                    txfNombre.textProperty().unbindBidirectional((oldVal.getNombreProperty()));
+                }
+                if(newVal != null){
+                    txfNombre.textProperty().bindBidirectional(newVal.getNombreProperty());
+                }
+            });
+        }catch(Exception ex){
+            new Mensaje().showModal(Alert.AlertType.ERROR,"Error al realizar el bindeo",getStage(),"Ocurrio un error al realizar el bindeo.");
+        }
+    }
     @FXML
     private void onActionNuevo(ActionEvent event) {
     }
@@ -96,9 +123,9 @@ public class EmpleadosViewController extends Controller implements Initializable
     private void onActionGuardar(ActionEvent event) {
     }
 
-    @Override
-    public void initialize() {
-     
+    private void bindEmpleado() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
-    
+
+
 }
