@@ -1,10 +1,9 @@
 *{
    -fx-base-color-focus: #09b6bc;
    -fx-base-color-etiquetas:#4d4d4d;
-   -fx-base-color-titulos: #51b6cd;
-       
+   -fx-base-color-titulos: #51b6cd;    
 }
-.mfx-txt-field{
+.mfx-text-field{
     -mfx-main:-fx-base-color-focus;
     -fx-prompt-text-fill:-fx-base-color-etiquetas;
     -mfx-float-mode:BORDER;
@@ -29,7 +28,7 @@
     -fx-pref-height:40px;
     -fx-max-height:40px;
 }
-.mfx-date-picker:focus-within.icon{
+.mfx-date-picker:focus-within .icon{
     -mfx-color:-fx-base-color-focus;
 }
 
@@ -43,16 +42,34 @@
     -fx-alignment:CENTER_LEFT;
 }
 .button:hover{
-    -fx-backgroudn-color:#FF6D00;
+    -fx-background-color:#FF6D00;
 }
-.jfx-btn-nuevo,.jfx-btn-nuevo:armed.jfx-btn-nuevo:focused{
-    -fx-backgroudn-color:#2196f3;
+.jfx-btn-nuevo,.jfx-btn-nuevo:armed,.jfx-btn-nuevo:focused{
+    -fx-background-color:#2196f3;
 }
-.jfx-btn-nuevo> imageView{
+.jfx-btn-nuevo > imageView{
     -fx-image:url("../resources/Agregar-48.png");
 }
+.jfx-btn-guardar,.jfx-btn-nuevo:armed,.jfx-btn-nuevo:focused{
+    -fx-background-color:#66FF66;
+}
+.jfx-btn-guardar > imageView{
+    -fx-image:url("../resources/Guardar-48.png");
+}
+.jfx-btn-eliminar,.jfx-btn-nuevo:armed,.jfx-btn-nuevo:focused{
+    -fx-background-color:#FF6666;
+}
+.jfx-btn-eliminar > imageView{
+    -fx-image:url("../resources/Eliminar-48.png");
+}
+.jfx-btn-buscar,.jfx-btn-nuevo:armed,.jfx-btn-nuevo:focused{
+    -fx-background-color:#0DB2F3;
+}
+.jfx-btn-buscar > imageView{
+    -fx-image:url("../resources/Buscar-48.png");
+}
 .separator{
-    -fx-backgroudn-color:-fx-base-color-focus;
+    -fx-background-color:-fx-base-color-focus;
 }
 .jfx-panelfondo{
     -fx-background-color:#2196F3;
@@ -69,5 +86,5 @@
     -fx-text-fill: -fx-base-color-titulos;
     -fx-font-weight:bold;
     -fx-effect:dropshadow(three-pass-box,rgba(0,0,0,0.6),2,0.0,1,2);
-    
 }
+/*AGREGAR LOS CHEAK BUTTONS*/

@@ -102,7 +102,7 @@
                         </ImageView>
                      </graphic>
                   </MFXButton>
-                  <MFXButton fx:id="btnBuscar" buttonType="RAISED" onAction="#onActionBuscar" text="Buscar">
+                  <MFXButton fx:id="btnBuscar" buttonType="RAISED" onAction="#onActionBuscar" styleClass="jfx-btn-buscar" text="Buscar">
                      <graphic>
                         <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -111,7 +111,7 @@
                         </ImageView>
                      </graphic>
                   </MFXButton>
-                  <MFXButton fx:id="btnEleminar" buttonType="RAISED" onAction="#onActionEliminar" text="Eliminar">
+                  <MFXButton fx:id="btnEleminar" buttonType="RAISED" onAction="#onActionEliminar" styleClass="jfx-btn-eliminar" text="Eliminar">
                      <graphic>
                         <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -120,7 +120,7 @@
                         </ImageView>
                      </graphic>
                   </MFXButton>
-                  <MFXButton fx:id="btnGuardar" buttonType="RAISED" onAction="#onActionGuardar" text="Guardar">
+                  <MFXButton fx:id="btnGuardar" buttonType="RAISED" onAction="#onActionGuardar" styleClass="jfx-btn-guardar" text="Guardar">
                      <graphic>
                         <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                            <image>

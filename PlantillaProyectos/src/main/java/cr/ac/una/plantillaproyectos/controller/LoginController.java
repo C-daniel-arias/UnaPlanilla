@@ -4,6 +4,7 @@
  */
 package cr.ac.una.plantillaproyectos.controller;
 
+import cr.ac.una.plantillaproyectos.util.AppContext;
 import cr.ac.una.plantillaproyectos.util.FlowController;
 import io.github.palexdev.materialfx.controls.MFXButton;
 import io.github.palexdev.materialfx.controls.MFXPasswordField;
@@ -46,6 +47,10 @@ public class LoginController extends Controller implements Initializable {
         imgFondo.fitWidthProperty().bind(root.widthProperty());
     }    
 
+    @Override
+    public void initialize() {
+    }
+    
     @FXML
     private void onActionCancelar(ActionEvent event) {
         ((Stage)btnCancelar.getScene().getWindow()).close();
@@ -53,12 +58,7 @@ public class LoginController extends Controller implements Initializable {
 
     @FXML
     private void onActionIngresar(ActionEvent event) {
-       //AppConte
-       FlowController.getInstance().goView("principalView");
+       AppContext.getInstance().set("Usuario", txfUsuario.getText());
+       FlowController.getInstance().goMain();
     }
-
-    @Override
-    public void initialize() {
-    }
-    
 }
