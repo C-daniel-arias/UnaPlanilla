@@ -25,7 +25,7 @@ import javafx.scene.layout.VBox;
  *
  * @author cdani
  */
-public class EmpleadosViewController implements Initializable {
+public class EmpleadosViewController extends Controller implements Initializable {
 
     @FXML
     private AnchorPane fondoPrin;
@@ -94,6 +94,11 @@ public class EmpleadosViewController implements Initializable {
 
     @FXML
     private void onActionGuardar(ActionEvent event) {
+    }
+
+    @Override
+    public void initialize() {
+     
     }
     
 }

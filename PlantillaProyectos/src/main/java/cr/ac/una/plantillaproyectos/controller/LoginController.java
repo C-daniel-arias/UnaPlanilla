@@ -4,6 +4,7 @@
  */
 package cr.ac.una.plantillaproyectos.controller;
 
+import cr.ac.una.plantillaproyectos.util.FlowController;
 import io.github.palexdev.materialfx.controls.MFXButton;
 import io.github.palexdev.materialfx.controls.MFXPasswordField;
 import io.github.palexdev.materialfx.controls.MFXTextField;
@@ -21,7 +22,7 @@ import javafx.stage.Stage;
  *
  * @author cdani
  */
-public class LoginController implements Initializable {
+public class LoginController extends Controller implements Initializable {
 
     @FXML
     private StackPane root;
@@ -52,6 +53,12 @@ public class LoginController implements Initializable {
 
     @FXML
     private void onActionIngresar(ActionEvent event) {
+       //AppConte
+       FlowController.getInstance().goView("principalView");
+    }
+
+    @Override
+    public void initialize() {
     }
     
 }
