@@ -50,19 +50,19 @@
 .jfx-btn-nuevo > imageView{
     -fx-image:url("../resources/Agregar-48.png");
 }
-.jfx-btn-guardar,.jfx-btn-nuevo:armed,.jfx-btn-nuevo:focused{
+.jfx-btn-guardar,.jfx-btn-guardar:armed,.jfx-btn-guardar:focused{
     -fx-background-color:#66FF66;
 }
 .jfx-btn-guardar > imageView{
     -fx-image:url("../resources/Guardar-48.png");
 }
-.jfx-btn-eliminar,.jfx-btn-nuevo:armed,.jfx-btn-nuevo:focused{
+.jfx-btn-eliminar,.jfx-btn-eliminar:armed,.jfx-btn-eliminar:focused{
     -fx-background-color:#FF6666;
 }
 .jfx-btn-eliminar > imageView{
     -fx-image:url("../resources/Eliminar-48.png");
 }
-.jfx-btn-buscar,.jfx-btn-nuevo:armed,.jfx-btn-nuevo:focused{
+.jfx-btn-buscar,.jfx-btn-buscar:armed,.jfx-btn-buscar:focused{
     -fx-background-color:#0DB2F3;
 }
 .jfx-btn-buscar > imageView{
