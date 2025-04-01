@@ -77,6 +77,12 @@
 .separator{
     -fx-background-color:-fx-base-color-focus;
 }
+.jfx-btn-ImgButton > ImageView{
+    -fx-image:url("../resources/Agregar-48.png");
+}
+.jfx-btn-ImgButton,.jfx-btn-ImgButton:armed,.jfx-btn-ImgButton:focused{
+    -fx-background-color:#2196f3;
+}
 .jfx-panelfondo{
     -fx-background-color:#2196F3;
     -fx-opacity:0.8;
@@ -97,4 +103,10 @@
     -mfx-main:-fx-base-color-focus;
     -mfx-secundary:-fx-base-color-focus;
     -mfx-fx-text-fill:-fx-base-color-etiquetas; 
+}
+.jfx-titulo-label-list{
+    -fx-font-size:15px;
+    -fx-padding: 5 0 5 0;
+    -fx-text-fill: -fx-base-color-titulos;
+    -fx-font-weight:bold;
 }
