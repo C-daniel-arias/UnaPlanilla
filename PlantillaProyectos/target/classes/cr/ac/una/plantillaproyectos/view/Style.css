@@ -41,9 +41,9 @@
     -fx-font-size:14px;
     -fx-alignment:CENTER_LEFT;
 }
-.button:hover{
+/*.button:hover{
     -fx-background-color:#FF6D00;
-}
+}*/
 .jfx-btn-nuevo,.jfx-btn-nuevo:armed,.jfx-btn-nuevo:focused{
     -fx-background-color:#2196f3;
 }
@@ -68,6 +68,12 @@
 .jfx-btn-buscar > imageView{
     -fx-image:url("../resources/Buscar-48.png");
 }
+.jfx-btn-varios,.jfx-btn-varios:armed,.jfx-btn-varios:focused{
+    -fx-background-color:#6666FF;
+}
+.jfx-btn-salir,.jfx-btn-salir:armed,.jfx-btn-salir:focused{
+    -fx-background-color:#FF0000;
+}
 .separator{
     -fx-background-color:-fx-base-color-focus;
 }
@@ -90,6 +96,5 @@
 .mfx-radio-button{
     -mfx-main:-fx-base-color-focus;
     -mfx-secundary:-fx-base-color-focus;
-    -mfx-fx-text-fill:-fx-base-color-etiquetas;
-  /*Preguntar por el focus en el css del git*/  
+    -mfx-fx-text-fill:-fx-base-color-etiquetas; 
 }

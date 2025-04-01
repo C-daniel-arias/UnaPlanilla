@@ -22,7 +22,7 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
        FlowController.getInstance().InitializeFlow(stage, null);
-       FlowController.getInstance().goViewInWindow("LogInView"); 
+       FlowController.getInstance().goViewInWindow("LoginView"); 
 //     scene = new Scene(loadFXML("loginView"), 640, 480);
 //     MFXThemeManager.setOn(scene, Themes.DEFAULT,Themes.LEGACY);
 //     stage.setScene(scene);

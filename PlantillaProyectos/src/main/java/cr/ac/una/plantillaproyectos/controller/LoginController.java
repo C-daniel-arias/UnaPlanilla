@@ -59,6 +59,7 @@ public class LoginController extends Controller implements Initializable {
     @FXML
     private void onActionIngresar(ActionEvent event) {
        AppContext.getInstance().set("Usuario", txfUsuario.getText());
+       AppContext.getInstance().set("Password", txfPassword.getText());
        FlowController.getInstance().goMain();
     }
 }
