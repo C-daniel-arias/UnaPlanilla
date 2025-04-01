@@ -21,7 +21,7 @@
       <VBox fx:id="fondoSec" alignment="CENTER" maxWidth="1.7976931348623157E308" styleClass="jfx-vbox" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
          <children>
             <Label alignment="BOTTOM_CENTER" styleClass="jfx-titulo-label" text="Control Tipos Planilla" />
-            <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+            <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
                <children>
                   <TabPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
                     <tabs>
@@ -29,29 +29,33 @@
                         <content>
                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
-                                    <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <VBox maxWidth="1.7976931348623157E308" prefHeight="186.0" prefWidth="222.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <children>
-                                          <VBox maxWidth="1.7976931348623157E308" prefHeight="186.0" prefWidth="222.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                                          <HBox alignment="BOTTOM_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
                                              <children>
                                                 <MFXTextField fx:id="btnId" floatingText="Id" prefWidth="121.0" />
+                                                <HBox alignment="BOTTOM_RIGHT" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <MFXCheckbox prefWidth="99.0" text="Activo" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </HBox>
+                                          <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="10.0" VBox.vgrow="ALWAYS">
+                                             <children>
                                                 <MFXTextField fx:id="btnCodigo" floatingText="Codigo" prefWidth="122.0" />
                                                 <MFXTextField fx:id="btnDescripcion" floatingText="Descripcion" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS" />
-                                                <MFXTextField fx:id="btnPlantillaXMes" floatingText="Plantilla x mes" layoutX="10.0" layoutY="90.0" prefWidth="122.0" />
+                                                <MFXTextField fx:id="btnPlantillaXMes" floatingText="Plantilla x mes" prefWidth="122.0" />
                                              </children>
-                                             <padding>
-                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                                             </padding>
-                                          </VBox>
-                                          <VBox alignment="TOP_RIGHT" maxWidth="1.7976931348623157E308" prefHeight="171.0" prefWidth="339.0" HBox.hgrow="ALWAYS">
-                                             <children>
-                                                <MFXCheckbox prefWidth="99.0" text="Activo" />
-                                             </children>
-                                             <padding>
-                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                                             </padding>
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                             </VBox.margin>
                                           </VBox>
                                        </children>
-                                    </HBox>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </VBox>
                                  </children>
                               </AnchorPane>
                         </content>
@@ -76,7 +80,7 @@
                                     </HBox>
                                     <Label prefHeight="31.0" prefWidth="125.0" styleClass="jfx-titulo-label-list" text="Lista empleados" />
                                     <Separator prefWidth="200.0" />
-                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                    <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
                                        <children>
                                           <TableView maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
                                             <columns>
@@ -98,7 +102,7 @@
                   </TabPane>
                </children>
             </VBox>
-            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="100.0" spacing="40.0" VBox.vgrow="ALWAYS">
+            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="87.0" prefWidth="558.0" spacing="40.0" VBox.vgrow="ALWAYS">
                <children>
                   <MFXButton fx:id="btnNuevo" buttonType="RAISED" onAction="#onActionNuevo" styleClass="jfx-btn-nuevo" text="Nuevo">
                      <graphic>
