@@ -97,9 +97,13 @@ public class EmpleadosViewController extends Controller implements Initializable
         try {
             empleadoProperty.addListener((obs,oldVal,newVal)->{
                 if(oldVal != null){
+                    txfId.textProperty().unbind();
                     txfNombre.textProperty().unbindBidirectional((oldVal.getNombreProperty()));
                 }
                 if(newVal != null){
+                    if(newVal.getIdProperty().get()!=null && !newVal.getIdProperty().get().isBlank()){
+                       txfId.textProperty().bindBidirectional(newVal.getIdProperty());
+                    }
                     txfNombre.textProperty().bindBidirectional(newVal.getNombreProperty());
                 }
             });
