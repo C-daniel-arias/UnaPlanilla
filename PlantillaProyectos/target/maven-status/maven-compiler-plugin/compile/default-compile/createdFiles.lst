@@ -1,4 +1,6 @@
+cr\ac\una\plantillaproyectos\model\Tipoplanilla.class
 cr\ac\una\plantillaproyectos\App.class
+cr\ac\una\plantillaproyectos\model\Empleado.class
 cr\ac\una\plantillaproyectos\controller\TiposPlanillaViewController.class
 cr\ac\una\plantillaproyectos\controller\EmpleadosViewController.class
 cr\ac\una\plantillaproyectos\util\Formato.class
@@ -9,4 +11,6 @@ cr\ac\una\plantillaproyectos\controller\Controller.class
 cr\ac\una\plantillaproyectos\util\BindingUtils.class
 cr\ac\una\plantillaproyectos\util\FlowController.class
 cr\ac\una\plantillaproyectos\controller\PrincipalViewController.class
+cr\ac\una\plantillaproyectos\model\Empleado_Consultas.class
 cr\ac\una\plantillaproyectos\controller\LoginController.class
+cr\ac\una\plantillaproyectos\model\Salario.class

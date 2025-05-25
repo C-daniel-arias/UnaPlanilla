@@ -5,6 +5,7 @@
 package cr.ac.una.plantillaproyectos.controller;
 
 import cr.ac.una.plantillaproyectos.model.EmpleadoDto;
+import cr.ac.una.plantillaproyectos.util.BindingUtils;
 import cr.ac.una.plantillaproyectos.util.Mensaje;
 import io.github.palexdev.materialfx.controls.MFXButton;
 import io.github.palexdev.materialfx.controls.MFXCheckbox;
@@ -93,24 +94,6 @@ public class EmpleadosViewController extends Controller implements Initializable
      
     }
     
-    private void bindEmpleados(){
-        try {
-            empleadoProperty.addListener((obs,oldVal,newVal)->{
-                if(oldVal != null){
-                    txfId.textProperty().unbind();
-                    txfNombre.textProperty().unbindBidirectional((oldVal.getNombreProperty()));
-                }
-                if(newVal != null){
-                    if(newVal.getIdProperty().get()!=null && !newVal.getIdProperty().get().isBlank()){
-                       txfId.textProperty().bindBidirectional(newVal.getIdProperty());
-                    }
-                    txfNombre.textProperty().bindBidirectional(newVal.getNombreProperty());
-                }
-            });
-        }catch(Exception ex){
-            new Mensaje().showModal(Alert.AlertType.ERROR,"Error al realizar el bindeo",getStage(),"Ocurrio un error al realizar el bindeo.");
-        }
-    }
     @FXML
     private void onActionNuevo(ActionEvent event) {
     }
@@ -126,9 +109,45 @@ public class EmpleadosViewController extends Controller implements Initializable
     @FXML
     private void onActionGuardar(ActionEvent event) {
     }
-
+    
     private void bindEmpleado() {
+        try 
+        {
+            empleadoProperty.addListener((obs, oldVal, newVal) -> {
+                if (oldVal != null) {
+                    txfId.textProperty().unbind();
+                    txfNombre.textProperty().unbindBidirectional(oldVal.getNombreProperty());
+                    txfPrimerApellido.textProperty().unbindBidirectional(oldVal.getPrimerApellidoProperty());
+                    txfSegundoApellido.textProperty().unbindBidirectional(oldVal.getSegundoApellidoProperty());
+                    txfCedula.textProperty().unbindBidirectional(oldVal.getCedulaProperty());
+                    txfCorreo.textProperty().unbindBidirectional(oldVal.getCorreoProperty());
+                    txfUsuario.textProperty().unbindBidirectional(oldVal.getUsuarioProperty());
+                    pasfClave.textProperty().unbindBidirectional(oldVal.getClaveProperty());
+                    //dpFechaIngreso.textProperty().unbindBidirectional(oldVal.getFechaIngresoProperty());
+
+                    pasfClave.textProperty().unbindBidirectional(oldVal.getClaveProperty());
+                    BindingUtils.unbindToggleGroupToProperty(Genero, oldVal.getGeneroProperty());
+                    cboxAdministrador.selectedProperty().unbindBidirectional(oldVal.getAdministradorProperty());
+                    cboxActivo.selectedProperty().unbindBidirectional(oldVal.getActivoProperty());
+                }
+                if (newVal != null) {
+                    if ((newVal.getIdProperty().get() != null) && (!newVal.getIdProperty().get().isBlank())) {
+                        txfId.textProperty().bindBidirectional(newVal.getIdProperty());
+                    }
+                    txfNombre.textProperty().bindBidirectional(newVal.getNombreProperty());
+                    txfPrimerApellido.textProperty().bindBidirectional(newVal.getPrimerApellidoProperty());
+                    txfSegundoApellido.textProperty().bindBidirectional(newVal.getSegundoApellidoProperty());
+                    txfCedula.textProperty().bindBidirectional(newVal.getCedulaProperty());
+                    txfCorreo.textProperty().bindBidirectional(newVal.getCorreoProperty());
+                    txfUsuario.textProperty().bindBidirectional(newVal.getUsuarioProperty());
+                    pasfClave.textProperty().bindBidirectional(newVal.getClaveProperty());
+                    BindingUtils.bindToggleGroupToProperty(Genero, newVal.getGeneroProperty());
+                    cboxAdministrador.selectedProperty().bindBidirectional(newVal.getAdministradorProperty());
+                    cboxAdministrador.selectedProperty().bindBidirectional(newVal.getActivoProperty());
+                }
+            });
+        } catch (Exception ex) {
+            new Mensaje().showModal(Alert.AlertType.ERROR, "Error al realizar el bindeo", getStage(), "Ocurrio un error al realizar el bindeo");
+            }
     }
-
-
 }
