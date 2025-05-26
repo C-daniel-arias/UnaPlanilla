@@ -124,7 +124,8 @@ public class EmpleadosViewController extends Controller implements Initializable
                     txfUsuario.textProperty().unbindBidirectional(oldVal.getUsuarioProperty());
                     pasfClave.textProperty().unbindBidirectional(oldVal.getClaveProperty());
                     //dpFechaIngreso.textProperty().unbindBidirectional(oldVal.getFechaIngresoProperty());
-
+                    dpFechaIngreso.valueProperty().unbindBidirectional(oldVal.getFechaIngresoProperty());
+                    dpFechaSalida.valueProperty().unbindBidirectional(oldVal.getFechaSalidaProperty());
                     pasfClave.textProperty().unbindBidirectional(oldVal.getClaveProperty());
                     BindingUtils.unbindToggleGroupToProperty(Genero, oldVal.getGeneroProperty());
                     cboxAdministrador.selectedProperty().unbindBidirectional(oldVal.getAdministradorProperty());
@@ -144,6 +145,8 @@ public class EmpleadosViewController extends Controller implements Initializable
                     BindingUtils.bindToggleGroupToProperty(Genero, newVal.getGeneroProperty());
                     cboxAdministrador.selectedProperty().bindBidirectional(newVal.getAdministradorProperty());
                     cboxAdministrador.selectedProperty().bindBidirectional(newVal.getActivoProperty());
+                    dpFechaIngreso.valueProperty().bindBidirectional(newVal.getFechaIngresoProperty());
+                    dpFechaSalida.valueProperty().bindBidirectional(newVal.getFechaSalidaProperty());
                 }
             });
         } catch (Exception ex) {
