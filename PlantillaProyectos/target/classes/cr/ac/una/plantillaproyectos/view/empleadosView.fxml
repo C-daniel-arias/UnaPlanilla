@@ -29,7 +29,7 @@
                <children>
                   <VBox alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="298.0" prefWidth="295.0" spacing="10.0" HBox.hgrow="ALWAYS">
                      <children>
-                        <MFXTextField fx:id="txfId" floatMode="BORDER" floatingText="Id" maxWidth="1.7976931348623157E308" />
+                        <MFXTextField fx:id="txfId" floatMode="BORDER" floatingText="Id" maxWidth="1.7976931348623157E308" onKeyPressed="#onKeyPressedTxtId" />
                         <MFXTextField fx:id="txfNombre" floatMode="BORDER" floatingText="Nombre" maxWidth="1.7976931348623157E308" />
                         <MFXTextField fx:id="txfPrimerApellido" floatMode="BORDER" floatingText="Primer apellido" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" />
                         <MFXTextField fx:id="txfSegundoApellido" floatMode="BORDER" floatingText="Segundo apellido" layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" />

@@ -31,7 +31,7 @@ import java.util.List;
 @Table(name = "PLAM_EMPLEADOS")
 @NamedQueries({
     @NamedQuery(name = "Empleado.findAll", query = "SELECT e FROM Empleado e"),
-    @NamedQuery(name = "Empleado.findByEmpId", query = "SELECT e FROM Empleado e WHERE e.id = :id"), /*@NamedQuery(name = "Empleado.findByEmpNombre", query = "SELECT e FROM Empleado e WHERE e.empNombre = :empNombre"),
+    @NamedQuery(name = "Empleado.findById", query = "SELECT e FROM Empleado e WHERE e.id = :id"), /*@NamedQuery(name = "Empleado.findByEmpNombre", query = "SELECT e FROM Empleado e WHERE e.empNombre = :empNombre"),
     @NamedQuery(name = "Empleado.findByEmpPapellido", query = "SELECT e FROM Empleado e WHERE e.empPapellido = :empPapellido"),
     @NamedQuery(name = "Empleado.findByEmpSapellido", query = "SELECT e FROM Empleado e WHERE e.empSapellido = :empSapellido"),
     @NamedQuery(name = "Empleado.findByEmpCedula", query = "SELECT e FROM Empleado e WHERE e.empCedula = :empCedula"),
@@ -78,10 +78,8 @@ public class Empleado implements Serializable {
     private String clave;
     @Basic(optional = false)
     @Column(name = "EMP_FINGRESO")
-    @Temporal(TemporalType.TIMESTAMP)
     private LocalDate fechaIngreso;
     @Column(name = "EMP_FSALIDA")
-    @Temporal(TemporalType.TIMESTAMP)
     private LocalDate fechaSalida;
     @Basic(optional = false)
     @Column(name = "EMP_ESTADO")
