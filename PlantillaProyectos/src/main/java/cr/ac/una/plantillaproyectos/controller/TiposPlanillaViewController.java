@@ -87,13 +87,10 @@ public class TiposPlanillaViewController extends Controller implements Initializ
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        btnCodigo.setUserData("F");
-        btnDescripcion.setUserData("M");
         btnId.delegateSetTextFormatter(Formato.getInstance().integerFormat());
-        btnPlantillaXMes.delegateSetTextFormatter(Formato.getInstance().letrasFormat(30));
-        btnIdEmpleado.delegateSetTextFormatter(Formato.getInstance().letrasFormat(15));
-        tipoplanilla = new TipoPlanillaDto();
-        btnPlantillaXMes.delegateSetTextFormatter(Formato.getInstance().maxLengthFormat(1);
+        btnCodigo.delegateSetTextFormatter(Formato.getInstance().letrasFormat(4));
+        btnDescripcion.delegateSetTextFormatter(Formato.getInstance().letrasFormat(40));
+        btnPlantillaXMes.delegateSetTextFormatter(Formato.getInstance().integerFormat());
         bindPlanilla();
         cargarValoresDefecto();
     }
@@ -195,7 +192,7 @@ public class TiposPlanillaViewController extends Controller implements Initializ
                     }
                     btnCodigo.textProperty().bindBidirectional(newVal.getCodigoProperty());
                     btnDescripcion.textProperty().bindBidirectional(newVal.getDescripcionProperty());
-                    btnPlantillaXMes.textProperty().bindBidirectional(oldVal.getPlaxmesProperty());
+                    btnPlantillaXMes.textProperty().bindBidirectional(newVal.getPlaxmesProperty());
                 }
             });
 
@@ -217,7 +214,7 @@ public class TiposPlanillaViewController extends Controller implements Initializ
             PlanillaService planillaService = new PlanillaService();
             Respuesta respuesta = planillaService.getTipoplanilla(id);
             if (respuesta.getEstado()) {
-                this.tipoplanilla = (TipoPlanillaDto) respuesta.getResultado("Empleado");
+                this.tipoplanilla = (TipoPlanillaDto) respuesta.getResultado("Tipoplanilla");
                 this.tipoplanillaProperty.set(this.tipoplanilla);
             } else {
                 new Mensaje().showModal(Alert.AlertType.ERROR, "Buscar Empleado", getStage(), respuesta.getMensaje());

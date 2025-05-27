@@ -33,14 +33,6 @@ public class TipoPlanillaDto {
         this.tplaEstado = new SimpleBooleanProperty(true);
     }
 
-    public TipoPlanillaDto(StringProperty id, StringProperty code, StringProperty description, StringProperty plaxmes, BooleanProperty active) {
-        this.tplaId = new SimpleStringProperty("");
-        this.tplaCodigo = new SimpleStringProperty("");
-        this.tplaDescripcion = new SimpleStringProperty("");
-        this.tplaPlaxmes = new SimpleStringProperty("");
-        this.tplaEstado = new SimpleBooleanProperty(true);
-    }
-
     public TipoPlanillaDto(Tipoplanilla planilla) {
         this();
         this.tplaId.set(planilla.getId().toString());
@@ -57,13 +49,13 @@ public class TipoPlanillaDto {
             return null;
         }
     }
-        
+
     public void setid(Long tplaId) {
         this.tplaId.set(tplaId.toString());
     }
-    
-    public Long getPlaxmes(){
-                if (this.tplaPlaxmes.get() != null && !this.tplaPlaxmes.get().isBlank()) {
+
+    public Long getPlaxmes() {
+        if (this.tplaPlaxmes.get() != null && !this.tplaPlaxmes.get().isBlank()) {
             return Long.valueOf(this.tplaPlaxmes.get());
         } else {
             return null;
@@ -73,7 +65,7 @@ public class TipoPlanillaDto {
     public void setPlaxmes(Long tplaPlaxmes) {
         this.tplaPlaxmes.set(tplaPlaxmes.toString());
     }
-    
+
     public String getCodigo() {
         return tplaCodigo.get();
     }
@@ -89,7 +81,6 @@ public class TipoPlanillaDto {
     public void setDescripcion(String descripcion) {
         this.tplaDescripcion.set(descripcion);
     }
-
 
     public Long getVersion() {
         return tplaVersion;

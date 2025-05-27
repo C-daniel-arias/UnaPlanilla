@@ -28,7 +28,7 @@ import java.util.List;
 @Table(name = "PLAM_TIPOPLANILLAS")
 @NamedQueries({
     @NamedQuery(name = "Tipoplanilla.findAll", query = "SELECT t FROM Tipoplanilla t"),
-    @NamedQuery(name = "Tipoplanilla.findByTplaId", query = "SELECT t FROM Tipoplanilla t WHERE t.tplaId = :tplaId"),/*
+    @NamedQuery(name = "Tipoplanilla.findById", query = "SELECT t FROM Tipoplanilla t WHERE t.id = :id"),/*
     @NamedQuery(name = "Tipoplanilla.findByTplaCodigo", query = "SELECT t FROM Tipoplanilla t WHERE t.tplaCodigo = :tplaCodigo"),
     @NamedQuery(name = "Tipoplanilla.findByTplaDescripcion", query = "SELECT t FROM Tipoplanilla t WHERE t.tplaDescripcion = :tplaDescripcion"),
     @NamedQuery(name = "Tipoplanilla.findByTplaPlaxmes", query = "SELECT t FROM Tipoplanilla t WHERE t.tplaPlaxmes = :tplaPlaxmes"),
