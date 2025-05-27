@@ -28,7 +28,7 @@ import java.util.List;
 @Table(name = "PLAM_TIPOPLANILLAS")
 @NamedQueries({
     @NamedQuery(name = "Tipoplanilla.findAll", query = "SELECT t FROM Tipoplanilla t"),
-    @NamedQuery(name = "Tipoplanilla.findByTplaId", query = "SELECT t FROM Tipoplanilla t WHERE t.tplaId = :tplaId"),
+    @NamedQuery(name = "Tipoplanilla.findByTplaId", query = "SELECT t FROM Tipoplanilla t WHERE t.tplaId = :tplaId"),/*
     @NamedQuery(name = "Tipoplanilla.findByTplaCodigo", query = "SELECT t FROM Tipoplanilla t WHERE t.tplaCodigo = :tplaCodigo"),
     @NamedQuery(name = "Tipoplanilla.findByTplaDescripcion", query = "SELECT t FROM Tipoplanilla t WHERE t.tplaDescripcion = :tplaDescripcion"),
     @NamedQuery(name = "Tipoplanilla.findByTplaPlaxmes", query = "SELECT t FROM Tipoplanilla t WHERE t.tplaPlaxmes = :tplaPlaxmes"),
@@ -36,7 +36,8 @@ import java.util.List;
     @NamedQuery(name = "Tipoplanilla.findByTplaMesultpla", query = "SELECT t FROM Tipoplanilla t WHERE t.tplaMesultpla = :tplaMesultpla"),
     @NamedQuery(name = "Tipoplanilla.findByTplaNumultpla", query = "SELECT t FROM Tipoplanilla t WHERE t.tplaNumultpla = :tplaNumultpla"),
     @NamedQuery(name = "Tipoplanilla.findByTplaEstado", query = "SELECT t FROM Tipoplanilla t WHERE t.tplaEstado = :tplaEstado"),
-    @NamedQuery(name = "Tipoplanilla.findByTplaVersion", query = "SELECT t FROM Tipoplanilla t WHERE t.tplaVersion = :tplaVersion")})
+    @NamedQuery(name = "Tipoplanilla.findByTplaVersion", query = "SELECT t FROM Tipoplanilla t WHERE t.tplaVersion = :tplaVersion")*/})
+
 public class Tipoplanilla implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -44,28 +45,28 @@ public class Tipoplanilla implements Serializable {
     @Id
     @Basic(optional = false)
     @Column(name = "TPLA_ID")
-    private BigDecimal tplaId;
+    private Long id;
     @Basic(optional = false)
     @Column(name = "TPLA_CODIGO")
-    private String tplaCodigo;
+    private String codigo;
     @Basic(optional = false)
     @Column(name = "TPLA_DESCRIPCION")
-    private String tplaDescripcion;
+    private String descripcion;
     @Basic(optional = false)
     @Column(name = "TPLA_PLAXMES")
-    private BigInteger tplaPlaxmes;
+    private Long plaxmes;
     @Column(name = "TPLA_ANOULTPLA")
-    private BigInteger tplaAnoultpla;
+    private Long anoultpla;
     @Column(name = "TPLA_MESULTPLA")
-    private BigInteger tplaMesultpla;
+    private Long mesultpla;
     @Column(name = "TPLA_NUMULTPLA")
-    private BigInteger tplaNumultpla;
+    private Long numultpla;
     @Basic(optional = false)
     @Column(name = "TPLA_ESTADO")
-    private String tplaEstado;
+    private String estado;
     @Basic(optional = false)
     @Column(name = "TPLA_VERSION")
-    private BigInteger tplaVersion;
+    private Long version;
     @JoinTable(name = "PLAM_EMPLEADOSPLANILLA", joinColumns = {
         @JoinColumn(name = "EXP_IDTPLA", referencedColumnName = "TPLA_ID")}, inverseJoinColumns = {
         @JoinColumn(name = "EXP_IDEMP", referencedColumnName = "EMP_ID")})
@@ -75,89 +76,90 @@ public class Tipoplanilla implements Serializable {
     public Tipoplanilla() {
     }
 
-    public Tipoplanilla(BigDecimal tplaId) {
-        this.tplaId = tplaId;
+    public Tipoplanilla(Long tplaId) {
+        this.id = tplaId;
+    }
+    public Tipoplanilla(TipoPlanillaDto tipoPlanillaDto) {
+        this.id = tipoPlanillaDto.getid();
+        actualizar(tipoPlanillaDto);
+    }
+   public void actualizar(TipoPlanillaDto tipoPlanillaDto) {
+        this.id = tipoPlanillaDto.getid();
+        this.codigo = tipoPlanillaDto.getCodigo();
+        this.descripcion = tipoPlanillaDto.getDescripcion();
+        this.plaxmes = tipoPlanillaDto.getPlaxmes();
+
+    }
+    public Long getId() {
+        return id;
     }
 
-    public Tipoplanilla(BigDecimal tplaId, String tplaCodigo, String tplaDescripcion, BigInteger tplaPlaxmes, String tplaEstado, BigInteger tplaVersion) {
-        this.tplaId = tplaId;
-        this.tplaCodigo = tplaCodigo;
-        this.tplaDescripcion = tplaDescripcion;
-        this.tplaPlaxmes = tplaPlaxmes;
-        this.tplaEstado = tplaEstado;
-        this.tplaVersion = tplaVersion;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public BigDecimal getTplaId() {
-        return tplaId;
+    public String getCodigo() {
+        return codigo;
     }
 
-    public void setTplaId(BigDecimal tplaId) {
-        this.tplaId = tplaId;
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
     }
 
-    public String getTplaCodigo() {
-        return tplaCodigo;
+    public String getDescripcion() {
+        return descripcion;
     }
 
-    public void setTplaCodigo(String tplaCodigo) {
-        this.tplaCodigo = tplaCodigo;
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
-    public String getTplaDescripcion() {
-        return tplaDescripcion;
+    public Long getPlaxmes() {
+        return plaxmes;
     }
 
-    public void setTplaDescripcion(String tplaDescripcion) {
-        this.tplaDescripcion = tplaDescripcion;
+    public void setPlaxmes(Long plaxmes) {
+        this.plaxmes = plaxmes;
     }
 
-    public BigInteger getTplaPlaxmes() {
-        return tplaPlaxmes;
+    public Long getAnoultpla() {
+        return anoultpla;
     }
 
-    public void setTplaPlaxmes(BigInteger tplaPlaxmes) {
-        this.tplaPlaxmes = tplaPlaxmes;
+    public void setAnoultpla(Long anoultpla) {
+        this.anoultpla = anoultpla;
     }
 
-    public BigInteger getTplaAnoultpla() {
-        return tplaAnoultpla;
+    public Long getMesultpla() {
+        return mesultpla;
     }
 
-    public void setTplaAnoultpla(BigInteger tplaAnoultpla) {
-        this.tplaAnoultpla = tplaAnoultpla;
+    public void setMesultpla(Long mesultpla) {
+        this.mesultpla = mesultpla;
     }
 
-    public BigInteger getTplaMesultpla() {
-        return tplaMesultpla;
+    public Long getNumultpla() {
+        return numultpla;
     }
 
-    public void setTplaMesultpla(BigInteger tplaMesultpla) {
-        this.tplaMesultpla = tplaMesultpla;
+    public void setNumultpla(Long numultpla) {
+        this.numultpla = numultpla;
     }
 
-    public BigInteger getTplaNumultpla() {
-        return tplaNumultpla;
+    public String getEstado() {
+        return estado;
     }
 
-    public void setTplaNumultpla(BigInteger tplaNumultpla) {
-        this.tplaNumultpla = tplaNumultpla;
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 
-    public String getTplaEstado() {
-        return tplaEstado;
+    public Long getVersion() {
+        return version;
     }
 
-    public void setTplaEstado(String tplaEstado) {
-        this.tplaEstado = tplaEstado;
-    }
-
-    public BigInteger getTplaVersion() {
-        return tplaVersion;
-    }
-
-    public void setTplaVersion(BigInteger tplaVersion) {
-        this.tplaVersion = tplaVersion;
+    public void setVersion(Long version) {
+        this.version = version;
     }
 
     public List<Empleado> getEmpleados() {
@@ -171,7 +173,7 @@ public class Tipoplanilla implements Serializable {
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (tplaId != null ? tplaId.hashCode() : 0);
+        hash += (id != null ? id.hashCode() : 0);
         return hash;
     }
 
@@ -182,7 +184,7 @@ public class Tipoplanilla implements Serializable {
             return false;
         }
         Tipoplanilla other = (Tipoplanilla) object;
-        if ((this.tplaId == null && other.tplaId != null) || (this.tplaId != null && !this.tplaId.equals(other.tplaId))) {
+        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
             return false;
         }
         return true;
@@ -190,7 +192,7 @@ public class Tipoplanilla implements Serializable {
 
     @Override
     public String toString() {
-        return "cr.ac.una.plantillaproyectos.model.Tipoplanilla[ tplaId=" + tplaId + " ]";
+        return "cr.ac.una.plantillaproyectos.model.Tipoplanilla[ tplaId=" + id + " ]";
     }
     
 }

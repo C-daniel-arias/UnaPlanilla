@@ -11,7 +11,6 @@ import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 
 public abstract class Controller {
-//Hola
 
     private Stage stage;
     private String accion;
