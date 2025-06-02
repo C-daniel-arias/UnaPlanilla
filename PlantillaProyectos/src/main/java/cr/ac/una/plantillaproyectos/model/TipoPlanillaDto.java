@@ -40,6 +40,7 @@ public class TipoPlanillaDto {
         this.tplaDescripcion.set(planilla.getDescripcion());
         this.tplaPlaxmes.set(planilla.getPlaxmes().toString());
         this.tplaEstado.set(planilla.getEstado().equals("A"));
+        this.tplaVersion=planilla.getVersion();
     }
 
     public Long getid() {

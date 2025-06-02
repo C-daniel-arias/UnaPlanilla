@@ -18,6 +18,7 @@ import jakarta.persistence.NamedQueries;
 import jakarta.persistence.NamedQuery;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
+import jakarta.persistence.Version;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.math.BigInteger;
@@ -69,7 +70,7 @@ public class Tipoplanilla implements Serializable {
     @Basic(optional = false)
     @Column(name = "TPLA_ESTADO")
     private String estado;
-    @Basic(optional = false)
+    @Version
     @Column(name = "TPLA_VERSION")
     private Long version;
     @JoinTable(name = "PLAM_EMPLEADOSPLANILLA", joinColumns = {
