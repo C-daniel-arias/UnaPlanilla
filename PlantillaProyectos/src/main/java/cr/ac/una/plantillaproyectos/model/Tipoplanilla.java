@@ -8,12 +8,15 @@ import jakarta.persistence.Basic;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.NamedQueries;
 import jakarta.persistence.NamedQuery;
+import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -25,7 +28,7 @@ import java.util.List;
  * @author cdani
  */
 @Entity
-@Table(name = "PLAM_TIPOPLANILLAS")
+@Table(name = "PLAM_TIPOPLANILLAS", schema = "UNA")
 @NamedQueries({
     @NamedQuery(name = "Tipoplanilla.findAll", query = "SELECT t FROM Tipoplanilla t"),
     @NamedQuery(name = "Tipoplanilla.findById", query = "SELECT t FROM Tipoplanilla t WHERE t.id = :id"),/*
@@ -43,6 +46,8 @@ public class Tipoplanilla implements Serializable {
     private static final long serialVersionUID = 1L;
     // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
     @Id
+    @SequenceGenerator(name = "PLAM_TIPOPLANILLAS_TPLA_ID_GENERATOR", sequenceName = "una.plam_tipoplanillas_seq01", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "PLAM_TIPOPLANILLAS_TPLA_ID_GENERATOR")
     @Basic(optional = false)
     @Column(name = "TPLA_ID")
     private Long id;
@@ -88,7 +93,7 @@ public class Tipoplanilla implements Serializable {
         this.codigo = tipoPlanillaDto.getCodigo();
         this.descripcion = tipoPlanillaDto.getDescripcion();
         this.plaxmes = tipoPlanillaDto.getPlaxmes();
-
+        this.version=tipoPlanillaDto.getVersion();
     }
     public Long getId() {
         return id;

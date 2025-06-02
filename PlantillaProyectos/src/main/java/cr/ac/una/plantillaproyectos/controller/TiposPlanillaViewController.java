@@ -160,7 +160,7 @@ public class TiposPlanillaViewController extends Controller implements Initializ
                 new Mensaje().showModal(Alert.AlertType.WARNING, "Guardar Empleado", getStage(), invalidar);
             } else {
                 PlanillaService planillaService = new PlanillaService();
-                Respuesta respuesta = planillaService.guardarTipoplanilla(this.tipoplanilla);
+                Respuesta respuesta = planillaService.guardarTipoplanilla(tipoplanilla);
                 if (respuesta.getEstado()) {
                     this.tipoplanilla = (TipoPlanillaDto) respuesta.getResultado("Empleado");
                     this.tipoplanillaProperty.set(this.tipoplanilla);

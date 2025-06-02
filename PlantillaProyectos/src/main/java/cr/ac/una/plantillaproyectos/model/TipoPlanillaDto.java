@@ -14,10 +14,10 @@ import javafx.beans.property.StringProperty;
 
 public class TipoPlanillaDto {
 
-    private StringProperty tplaId;
-    private StringProperty tplaCodigo;
-    private StringProperty tplaDescripcion;
-    private StringProperty tplaPlaxmes;
+    public StringProperty tplaId;
+    public StringProperty tplaCodigo;
+    public StringProperty tplaDescripcion;
+    public StringProperty tplaPlaxmes;
     private LongProperty tplaAnoultpla;
     private LongProperty tplaMesultpla;
     private LongProperty tplaNumultpla;

@@ -40,7 +40,7 @@ public class PlanillaService {
             return new Respuesta(false, "Error obteniendo el empleado.", "getEmpleado " + ex.getMessage());
         }
     }
-
+    
     public Respuesta guardarTipoplanilla(TipoPlanillaDto tipoPlanillaDto) {
         try {
             et = em.getTransaction();
@@ -88,5 +88,5 @@ public class PlanillaService {
             return new Respuesta(false, "Error eliminando el empleado.", "eliminarEmpleado" + ex.getMessage());
         }
     }
-    
+   
 }
