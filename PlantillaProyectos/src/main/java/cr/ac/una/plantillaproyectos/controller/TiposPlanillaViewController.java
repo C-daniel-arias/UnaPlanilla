@@ -112,7 +112,7 @@ public class TiposPlanillaViewController extends Controller implements Initializ
             cargarValoresDefecto();
         }
     }
-
+    
     @FXML
     private void onActionBuscar(ActionEvent event) {
         try {
